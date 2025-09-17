@@ -1,0 +1,25 @@
+body 
+{
+margin: 0;
+padding: 0;
+background-color: lightgray;    
+}
+#header
+{
+width: 100%;
+height: auto;
+margin: 0;
+background-color: #358eb8;    
+}
+.sidebar-link li
+{
+display: block;
+padding: 25px 0px;
+font-size: 18px;
+}
+.sidebar-link a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;    
+}

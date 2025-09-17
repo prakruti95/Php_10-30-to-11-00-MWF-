@@ -1,0 +1,12 @@
+body 
+{
+margin: 0;
+padding: 0;
+background-color: lightgray;    
+}
+.login 
+{
+width: 35%;
+height: auto;
+margin: auto;    
+}
