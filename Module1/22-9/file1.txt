@@ -1,0 +1,64 @@
+DQL
+15. select all
+select * from tablenm
+
+16. particular column dispaly
+SELECT columnnm from tablenm
+
+17. particular row display
+select * from tablenm where id='id' 
+
+18.order by
+select colnm from tblnm order by colnm asc/desc
+
+DCL:
+19.
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+COMMIT;
+
+20.
+START TRANSACTION;
+UPDATE users SET email = 'new_email@example.com' WHERE user_id = 123;
+INSERT INTO logs (action, user_id) VALUES ('email_update_attempt', 123);
+ROLLBACK;
+
+
+Constraint Keys:
+1)primary key -> avoid data duplication
+2)foreign key -> provide refrence[JOIN]
+3)unique key -> uniquely identify data
+
+
+JOINS:
+1) INNER JOIN -> SELECT * FROM location JOIN products ON location.lid = products.id
+2) LEFT JOIN -> SELECT * FROM location LEFT JOIN products ON location.lid = products.id
+3) RIGHT JOIN -> SELECT * FROM location RIGHT JOIN products ON location.lid = products.id
+4) FULL JOIN ->
+SELECT * FROM location LEFT JOIN products ON location.lid = products.id
+UNION
+SELECT * FROM location RIGHT JOIN products ON location.lid = products.id
+
+Agreegate Functions
+AVG() - Returns the average value
+SELECT AVG(AGE) AS AvgAge FROM Students; 
+
+
+COUNT() - Returns the number of rows
+SELECT COUNT(*) AS NumStudents FROM Stuents;
+
+FIRST() - Returns the first value
+SELECT * FROM products LIMIT 1;
+
+LAST() - Returns the last value
+SELECT * FROM products order by p_price DESC LIMIT 1;
+
+MAX() - Returns the largest value
+SELECT MAX(AGE) AS AvgAge FROM Students; 
+
+MIN() - Returns the smallest value
+SELECT MIN(AGE) AS AvgAge FROM Students; 
+
+SUM() - Returns the sum
+SELECT SUM(AGE) AS AvgAge FROM Students; 
